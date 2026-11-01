@@ -105,3 +105,15 @@ button:focus-visible,.astra-link:focus-visible{outline:3px solid #7954ad;outline
 @media(max-width:690px){.astra-home-side{grid-template-columns:1fr}.astra-search-wrap{width:100%}.astra-profile{display:none}.astra-mission-tiles{grid-template-columns:1fr 1fr}.astra-feature-card:last-child{grid-column:1/-1;min-height:130px}.astra-learning-grid{grid-template-columns:1fr 1fr}.astra-welcome{min-height:230px}.astra-welcome-copy{max-width:70%}.astra-welcome-art{right:-8%;width:63%;opacity:.8}.astra-welcome-copy h1{font-size:3.6rem}.astra-welcome-copy p{font-size:.91rem}.astra-map-stage{overflow-x:auto}.astra-home .star-map{min-width:690px}}
 @media(max-width:460px){.content{padding:0 9px 30px!important}.topbar{padding:9px!important}.astra-welcome{padding:25px 16px;min-height:213px}.astra-welcome-copy{max-width:90%}.astra-welcome-copy h1{font-size:3.15rem}.astra-welcome-art{opacity:.38}.welcome-orbit-note{display:none}.astra-panel-heading{padding:15px 13px 8px;align-items:flex-start}.astra-panel-heading h2{font-size:.97rem}.astra-panel-actions{gap:3px}.astra-link{font-size:.69rem;padding:6px 8px}.astra-mission-tiles{padding:8px}.astra-feature-card{min-height:160px}.astra-feature-card strong{font-size:.9rem}.astra-learning-grid{padding:8px}.astra-learning-card{padding:9px 6px}.learn-icon{width:32px;height:32px}.astra-level-ring{width:78px;height:78px}.astra-level{gap:9px}}
 @media(prefers-reduced-motion:reduce){.astra-feature-card img,.astra-home .map-node,.astra-achievement{transition:none!important}}
+
+/* Arte integrada nas páginas internas */
+.mission-card .m-art{display:block;width:118px;height:106px;overflow:visible;background:transparent!important;border-radius:0;flex-shrink:0;margin:0 0 10px}
+.mission-card .m-art img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 4px 5px #b58bcb22)}
+.mission-card{border:1px solid #ebdce9;background:linear-gradient(145deg,#fffcfa,#fcf7ff);box-shadow:var(--astra-shadow);border-radius:20px}
+.mission-card:nth-child(6n+2){background:linear-gradient(145deg,#fffcfa,#f4faff)}
+.mission-card:nth-child(6n+3){background:linear-gradient(145deg,#fffdfa,#fef2f5)}
+.mission-card h3{font-family:Georgia,serif;font-size:1.17rem;font-weight:400;color:#57406f}
+.award .award-icon{width:112px;height:112px;background:transparent;box-shadow:none;border:0}
+.award .award-icon img{width:100%;height:100%;object-fit:contain}
+.award{background:linear-gradient(135deg,#fffdfb,#fcf8ff);border:1px solid #efe3e9;border-radius:20px;box-shadow:var(--astra-shadow)}
+.award h3{font-family:Georgia,serif;font-size:1.04rem;font-weight:400}
