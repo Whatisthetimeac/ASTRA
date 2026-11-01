@@ -5,6 +5,7 @@
 <meta name="theme-color" content="#fffaf5"><meta name="description" content="ASTRA — protótipo gamificado e acessível de educação em robótica e impacto social para meninas de 12 a 15 anos.">
 <title>ASTRA • Sua jornada começa nas estrelas</title>
 <link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Pular para o conteúdo</a>
@@ -24,27 +25,98 @@
   <div class="side-bottom"><div class="side-note"><div class="badge-sticker" aria-hidden="true">✧</div><strong>SONHE<br>APRENDA<br>CONSTRUA<br>INSPIRE</strong><p>✦</p></div><div class="copyright">✧ Sonhe · Aprenda · Construa · Inspire</div></div>
 </aside>
 <div class="layout">
-<header class="topbar"><label class="astra-search"><span aria-hidden="true">⌕</span><input id="astra-search" type="search" placeholder="Buscar atividades, conteúdos ou projetos..." aria-label="Buscar atividades" autocomplete="off"></label><div class="toolbar"><button id="settings-btn" class="control" type="button">♿ Acessibilidade</button><div class="astra-profile" aria-label="Perfil demonstrativo"><span class="astra-avatar" aria-hidden="true">✦</span><span><strong>Olá, exploradora!</strong><small id="breadcrumb">Início</small></span></div></div></header>
+<header class="topbar"><div class="astra-search-wrap"><label class="astra-search"><span aria-hidden="true">⌕</span><input id="astra-search" type="search" placeholder="Buscar atividades, conteúdos ou projetos..." aria-label="Buscar atividades" aria-expanded="false" aria-controls="astra-search-results" autocomplete="off"></label><div id="astra-search-results" class="astra-search-results" role="listbox" aria-label="Resultados da busca" hidden></div></div><div class="toolbar"><button id="settings-btn" class="control" type="button">♿ Acessibilidade</button><div class="astra-profile" aria-label="Perfil demonstrativo"><span class="astra-avatar" aria-hidden="true">✦</span><span><strong>Olá, exploradora!</strong><small id="breadcrumb">Início</small></span></div></div></header>
 <main id="main" class="content" tabindex="-1">
-<section data-page="inicio" aria-labelledby="home-title">
-  <div class="hero">
-    <div class="hero-copy"><span class="chip">B E M - V I N D A &nbsp; A O &nbsp; A S T R A</span><h1 id="home-title">ASTRA <span class="hero-sparkle" aria-hidden="true">✧</span></h1><p class="hero-subtitle">Tecnologia, ciência e criatividade<br>para meninas que sonham em ir mais longe.</p><p class="hero-motto">mais meninas em órbita ✦</p><div class="hero-actions"><button class="btn" data-nav="mapa">Explorar meu mapa <span aria-hidden="true">↗</span></button><button class="btn btn-light" data-nav="missoes">Ver missões</button></div></div>
-    <div class="hero-art"><img src="assets/images/logo-astra.webp" alt="Logotipo ASTRA escolhido: estrela com órbita suave e letras pastéis brilhantes"><span class="art-star" aria-hidden="true">✧</span></div>
+<section data-page="inicio" class="astra-home" aria-labelledby="home-title">
+  <div class="astra-home-main">
+    <section class="astra-welcome" aria-labelledby="home-title">
+      <div class="astra-welcome-copy">
+        <span class="astra-eyebrow">B E M - V I N D A &nbsp; A O</span>
+        <h1 id="home-title">ASTRA</h1>
+        <p>Tecnologia, ciência e criatividade<br>para meninas que sonham em ir mais longe.</p>
+        <span class="astra-welcome-cta">Descubra seu universo <span aria-hidden="true">✧</span></span>
+      </div>
+      <div class="astra-welcome-art">
+        <img src="assets/images/simbolo-astra.webp" alt="Estrela de quatro pontas com uma órbita em cores pastéis" loading="eager">
+        <span class="welcome-orbit-note">mais meninas<br>em órbita</span>
+        <span class="welcome-spark spark-a" aria-hidden="true">✧</span>
+        <span class="welcome-spark spark-b" aria-hidden="true">✦</span>
+      </div>
+    </section>
+
+    <section class="astra-panel astra-journey" aria-labelledby="journey-heading">
+      <header class="astra-panel-heading">
+        <div><span class="astra-overline">EXPLORE SEU UNIVERSO</span><h2 id="journey-heading">Sua jornada</h2></div>
+        <div class="astra-panel-actions"><button class="astra-link" type="button" data-nav="missoes">Ver como lista</button><button class="astra-link" type="button" data-nav="mapa">Mapa completo <span aria-hidden="true">↗</span></button></div>
+      </header>
+      <p class="astra-panel-description">Cada planeta marca uma descoberta. Escolha um ponto iluminado para continuar.</p>
+      <div class="astra-map-stage"><div id="map-home" class="star-map" aria-label="Mapa interativo com as seis missões da jornada"></div></div>
+    </section>
+
+    <section class="astra-panel astra-mission-showcase" aria-labelledby="spotlight-heading">
+      <header class="astra-panel-heading"><h2 id="spotlight-heading">Missões em destaque</h2><button class="astra-link" type="button" data-nav="missoes">Ver todas <span aria-hidden="true">↗</span></button></header>
+      <div class="astra-mission-tiles">
+        <button type="button" class="astra-feature-card" data-nav="circuitos">
+          <img src="assets/images/astraverse/mission-led.svg" alt="Ilustração de LED rosa aceso numa protoboard" loading="lazy">
+          <span class="astra-tile-tag">ELETRÔNICA</span><strong>Monte seu primeiro circuito</strong><small>10 missões de aprendizagem <span aria-hidden="true">✦</span></small>
+        </button>
+        <button type="button" class="astra-feature-card" data-nav="missoes">
+          <img src="assets/images/astraverse/mission-code.svg" alt="Ilustração de notebook com linhas de código" loading="lazy">
+          <span class="astra-tile-tag">DESAFIO</span><strong>Descubra a lógica da programação</strong><small>Aprenda fazendo <span aria-hidden="true">✦</span></small>
+        </button>
+        <button type="button" class="astra-feature-card" data-nav="criacao">
+          <img src="assets/images/astraverse/mission-impact.svg" alt="Ilustração de um drone em cenário pastel" loading="lazy">
+          <span class="astra-tile-tag">PROJETO</span><strong>Crie uma solução para sua comunidade</strong><small>Transforme uma ideia <span aria-hidden="true">✦</span></small>
+        </button>
+      </div>
+    </section>
+
+    <section class="astra-panel astra-learn" aria-labelledby="continue-heading">
+      <header class="astra-panel-heading"><h2 id="continue-heading">Continue aprendendo</h2><button class="astra-link" type="button" data-nav="circuitos">Explorar aulas <span aria-hidden="true">↗</span></button></header>
+      <div class="astra-learning-grid">
+        <button type="button" data-nav="circuitos" class="astra-learning-card"><span class="learn-icon pink">♧</span><span><strong>Eletrônica</strong><small>10 missões práticas</small></span><span aria-hidden="true">›</span></button>
+        <button type="button" data-nav="missoes" class="astra-learning-card"><span class="learn-icon lavender">⌘</span><span><strong>Programação</strong><small>Lógica e decisões</small></span><span aria-hidden="true">›</span></button>
+        <button type="button" data-nav="laboratorio" class="astra-learning-card"><span class="learn-icon blue">⚙</span><span><strong>Robótica</strong><small>Sensor virtual</small></span><span aria-hidden="true">›</span></button>
+        <button type="button" data-nav="criacao" class="astra-learning-card"><span class="learn-icon mint">✎</span><span><strong>Inventar</strong><small>Projetos com impacto</small></span><span aria-hidden="true">›</span></button>
+      </div>
+    </section>
   </div>
-  <div class="feature-row" aria-label="Resumo do seu progresso">
-    <article class="feature-tile white-card big"><div class="ribbon">🧭 Passaporte estelar</div><h3>Você está na <span id="world-name">Constelação das Ideias</span></h3><p>Sem pressa, sem competição: você constrói sua própria jornada.</p></article>
-    <article class="feature-tile white-card blue"><div class="tile-symbol" aria-hidden="true">⭐</div><div class="big-num" id="home-stars">0</div><p>estrelas conquistadas</p></article>
-    <article class="feature-tile white-card yellow"><div class="tile-symbol" aria-hidden="true">🏅</div><div class="big-num" id="home-awards">0</div><p>medalhas desbloqueadas</p></article>
-  </div>
-  <div class="two-col"><div class="journey-column">
-    <div class="section-heading"><div><h2>Sua jornada <span aria-hidden="true">✧</span></h2><p>Complete missões para iluminar novas constelações.</p></div><button class="linkish" data-nav="mapa">Ver mapa inteiro ↗</button></div>
-    <div id="map-home" class="star-map" aria-label="Mapa das seis missões"></div>
-    <div class="world-info"><div><div class="symbol" aria-hidden="true" id="featured-symbol">🔎</div><span class="section-label">PRÓXIMA MISSÃO</span><h3 id="featured-title">O olhar de exploradora</h3><p id="featured-desc">Descubra um desafio real que gostaria de transformar.</p></div><button id="featured-btn" class="btn">Começar missão ↗</button></div>
-  </div><div class="right-stack">
-    <article class="white-card passport"><div class="passport-top"><div><span class="level" id="level-label">NÍVEL 1 · EXPLORADORA</span><h3>Meu progresso ✨</h3></div><span class="planet-badge" aria-hidden="true">🌙</span></div><div class="stars"><span id="passport-stars">0</span> <span style="font-size:.95rem">/ 120 ⭐</span></div><div class="progress" role="progressbar" aria-label="Progresso nas missões" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" id="progressbar"><span id="progress-fill"></span></div><p class="progress-desc"><b id="mission-counter">0 de 6</b> missões concluídas</p></article>
-    <article class="white-card sticker-card"><div class="icon" aria-hidden="true">🎁</div><h3>Uma nova medalha te espera!</h3><p id="next-award">Experimente sua primeira missão para ganhar o selo de Exploradora.</p><button class="linkish" data-nav="medalhas">Ver coleção ↗</button></article>
-    <article class="white-card a11y-card"><div style="font-size:1.7rem" aria-hidden="true">🌈</div><h3>Um universo para todas</h3><p>Texto ampliável, menos animações e desafios sem cronômetro.</p><button class="linkish" id="settings-inline">Personalizar experiência ↗</button></article>
-  </div></div>
+
+  <aside class="astra-home-side" aria-label="Seu progresso e próximos passos">
+    <section class="astra-panel astra-progress-card" aria-labelledby="progress-heading">
+      <header class="astra-panel-heading"><h2 id="progress-heading">Meu progresso</h2><button class="astra-link" type="button" data-nav="medalhas">Ver detalhes <span aria-hidden="true">↗</span></button></header>
+      <div class="astra-level">
+        <div class="astra-level-ring"><img src="assets/images/astraverse/badge-estrela.svg" alt="" loading="lazy"></div>
+        <div class="astra-level-data"><span id="level-label" class="level">NÍVEL 1 · EXPLORADORA</span><p>Uma descoberta de cada vez</p><div class="progress" role="progressbar" aria-label="Missões concluídas" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" id="progressbar"><span id="progress-fill"></span></div><small><span id="passport-stars">0</span> / 120 estrelas · <span id="mission-counter">0 de 6</span> missões</small></div>
+      </div>
+      <div class="astra-mini-stats"><div><span aria-hidden="true">✩</span><strong id="home-stars">0</strong><small>Estrelas</small></div><div><span aria-hidden="true">✧</span><strong id="home-awards">0</strong><small>Medalhas</small></div><div><span aria-hidden="true">☽</span><strong id="world-name">Ideias</strong><small>Constelação</small></div></div>
+      <button type="button" id="settings-inline" class="astra-settings-link">Personalizar a experiência <span aria-hidden="true">↗</span></button>
+    </section>
+
+    <section class="astra-panel astra-weekly-card" aria-labelledby="weekly-heading">
+      <header class="astra-panel-heading"><h2 id="weekly-heading">Desafio para começar</h2><span class="astra-tag-soft">✦ Circuitos</span></header>
+      <button class="astra-challenge" type="button" data-nav="circuitos"><img src="assets/images/astraverse/mission-led.svg" alt="Ilustração de LED e protoboard" loading="lazy"><span><strong>Monte um circuito que acenda um LED</strong><small>Conheça a eletrônica no ASTRA Lab</small></span><span class="astra-arrow" aria-hidden="true">›</span></button>
+    </section>
+
+    <section class="astra-panel astra-achievements" aria-labelledby="achievements-heading">
+      <header class="astra-panel-heading"><h2 id="achievements-heading">Minhas conquistas</h2><button class="astra-link" type="button" data-nav="medalhas">Ver todas <span aria-hidden="true">↗</span></button></header>
+      <div class="astra-achievement-grid">
+        <div class="astra-achievement" data-unlock="1"><img src="assets/images/astraverse/badge-estrela.svg" alt=""><small>Primeiros passos</small></div>
+        <div class="astra-achievement" data-unlock="2"><img src="assets/images/astraverse/badge-planeta.svg" alt=""><small>Exploradora</small></div>
+        <div class="astra-achievement" data-unlock="4"><img src="assets/images/astraverse/badge-ideia.svg" alt=""><small>Criadora</small></div>
+        <div class="astra-achievement" data-unlock="6"><img src="assets/images/astraverse/badge-comunidade.svg" alt=""><small>Transformadora</small></div>
+      </div>
+      <p id="next-award" class="astra-achievement-note">Complete sua primeira missão para desbloquear uma medalha.</p>
+    </section>
+
+    <section class="astra-panel astra-next" aria-labelledby="next-heading">
+      <header class="astra-panel-heading"><h2 id="next-heading">Sua próxima descoberta</h2></header>
+      <div class="astra-next-content"><span id="featured-symbol" class="astra-next-icon" aria-hidden="true">✧</span><div><h3 id="featured-title">O olhar de exploradora</h3><p id="featured-desc">Observe sua comunidade e escolha um problema que gostaria de resolver.</p></div></div>
+      <button id="featured-btn" class="astra-next-button" type="button">Continuar jornada <span aria-hidden="true">↗</span></button>
+    </section>
+
+    <div class="astra-quote">“A curiosidade de hoje pode mudar o amanhã.”<span aria-hidden="true">✧</span></div>
+  </aside>
 </section>
 <section data-page="mapa" hidden aria-labelledby="map-title"><div class="headgroup"><span class="section-label">SUA AVENTURA · 3 CONSTELAÇÕES</span><h1 id="map-title">Mapa do universo ASTRA ✦</h1><p>Cada estrela é uma descoberta. Você pode rever as missões concluídas quando quiser.</p></div><div class="chapter-row"><span class="chapter-pill">🌸 1 · Imaginar</span><span class="chapter-pill">💎 2 · Experimentar</span><span class="chapter-pill">🌿 3 · Transformar</span></div><div id="map-full" class="star-map" aria-label="Mapa interativo de seis missões"></div><div class="world-info"><div><span class="section-label">SUA PRÓXIMA DESCOBERTA</span><h3 id="map-feature-title">Missão 1</h3><p id="map-feature-desc"></p></div><button class="btn" id="map-feature-btn">Abrir missão ↗</button></div><p class="bottom-caption">Progresso demonstrativo salvo apenas neste navegador. Nenhuma informação é enviada a servidores.</p></section>
 <section data-page="missoes" hidden aria-labelledby="missions-title"><div class="headgroup"><span class="section-label">APRENDA FAZENDO</span><h1 id="missions-title">Missões da sua galáxia 🚀</h1><p>Uma história de tecnologia e impacto social em seis desafios curtos. Sem notas, sem ranking e sem pressão.</p></div><div class="chapter-row"><span class="chapter-pill">🌸 1–2 · Imaginar</span><span class="chapter-pill">💎 3–4 · Experimentar</span><span class="chapter-pill">🌿 5–6 · Transformar</span></div><div class="mission-grid" id="mission-cards"></div></section>
@@ -59,11 +131,12 @@
 <section data-page="criacao" hidden aria-labelledby="creation-title"><div class="headgroup"><span class="section-label">IDEIAS QUE TRANSFORMAM</span><h1 id="creation-title">Meu cantinho de invenções 💡</h1><p>Seu primeiro rascunho de projeto de impacto social. Você pode mudar de ideia quantas vezes quiser.</p></div><div class="lab-grid"><article class="white-card note-card wallpaper"><h2>✨ Meu caderno de ideias</h2><p>O que você gostaria de melhorar na sua escola, rua ou comunidade? Como a tecnologia poderia ajudar?</p><form id="idea-form"><label for="idea-input"><strong>Minha invenção começa assim:</strong></label><textarea class="text-box" id="idea-input" maxlength="420" placeholder="Eu gostaria de criar uma solução para... porque..." aria-describedby="idea-counter"></textarea><div class="form-row"><span id="idea-counter">0 / 420 caracteres</span><button class="btn" type="submit">Guardar minha ideia ✨</button></div><div id="idea-feedback" class="feedback" role="status"></div></form><div class="ideapreview" id="idea-preview" hidden></div></article><article class="white-card note-card"><h2>🪄 Como nasce uma invenção?</h2><div class="hint">1 · Escolha um problema real.</div><p style="margin:10px 0">2 · Imagine quem sua ideia pode ajudar.</p><div class="hint">3 · Pense em um sensor, aplicativo ou robô simples.</div><p style="margin:10px 0">4 · Teste, converse, melhore e apresente.</p><p><strong>Importante:</strong> não informe seu nome completo, telefone, endereço nem fotos pessoais neste protótipo.</p></article></div></section>
 <section data-page="medalhas" hidden aria-labelledby="badges-title"><div class="headgroup"><span class="section-label">CADA DESCOBERTA CONTA</span><h1 id="badges-title">Minha coleção estelar 🏅</h1><p>As conquistas valorizam curiosidade, cuidado, experimentação e criatividade. Não existem rankings entre participantes.</p></div><div class="badge-grid" id="awards-grid"></div><div class="white-card note-card wallpaper" style="margin-top:19px"><h3>🌟 Cada pessoa brilha de um jeito</h3><p>Aqui você avança no seu ritmo. As medalhas são simbólicas e só existem nesta demonstração do ASTRA.</p><button class="control" id="reset-progress">Recomeçar demonstração</button></div></section>
 </main>
-<p class="bottom-caption">ASTRA v2 • estudo de interface • plataforma ainda não lançada • exemplos de atividades para revisão</p>
+<p class="bottom-caption">ASTRA • plataforma educativa em desenvolvimento. Seu progresso de demonstração fica apenas neste navegador. Nenhuma comunidade on-line é simulada.</p>
 </div></div>
 <div id="activity-modal" class="overlay" role="presentation"><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="activity-title"><div class="dialog-top"><div><span class="section-label" id="activity-kicker">MISSÃO</span><h2 id="activity-title">Missão</h2></div><button class="x-btn" id="close-activity" aria-label="Fechar missão">×</button></div><p id="activity-desc"></p><button class="control" id="read-activity" type="button">🔊 Ouvir instrução</button><div class="activity" id="activity-content"></div><div id="activity-feedback" class="feedback" role="status" aria-live="polite"></div></section></div>
 <div id="settings-modal" class="overlay" role="presentation"><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="settings-title"><div class="dialog-top"><div><span class="section-label">ASTRA PARA TODAS</span><h2 id="settings-title">Minha experiência ♿</h2></div><button class="x-btn" id="close-settings" aria-label="Fechar acessibilidade">×</button></div><p>Personalize a leitura e os efeitos visuais. Os ajustes são usados nesta demonstração.</p><div class="switch-line"><div><strong>Texto maior</strong><small>Aumentar o tamanho da leitura.</small></div><button class="switch" id="switch-text" aria-pressed="false">Desligado</button></div><div class="switch-line"><div><strong>Maior contraste</strong><small>Destacar textos, contornos e botões.</small></div><button class="switch" id="switch-contrast" aria-pressed="false">Desligado</button></div><div class="switch-line"><div><strong>Menos movimento</strong><small>Reduzir transições e animações.</small></div><button class="switch" id="switch-motion" aria-pressed="false">Desligado</button></div><div class="switch-line"><div><strong>Visual simplificado</strong><small>Suavizar texturas e ilustrações de fundo.</small></div><button class="switch" id="switch-simple" aria-pressed="false">Desligado</button></div><div class="notice">Nenhuma missão tem limite de tempo. Você pode navegar com teclado e encontrar instruções também por escrito. A leitura em voz alta depende do navegador.</div><button class="btn" id="done-settings">Concluir ajustes</button></section></div>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script src="assets/js/app.js" defer></script>
 <script src="assets/js/circuitos.js" defer></script>
+<script src="assets/js/search.js" defer></script>
 </body></html>
