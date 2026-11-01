@@ -16,6 +16,8 @@ jobs:
         run: |
           node --check assets/js/app.js
           node --check assets/js/circuitos.js
+      - name: Testes de integridade das aulas
+        run: node tests/validate-circuits.mjs
       - name: Verificar arquivos e referencias essenciais
         run: |
           test -s index.html
