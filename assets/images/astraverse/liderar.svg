@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" role="img" aria-labelledby="title"><title id="title">Planeta ilustrado em tons pastéis da etapa liderar</title><defs>
+ <radialGradient id="orb" cx="30%" cy="22%" r="80%"><stop stop-color="#fff4f7"/><stop offset=".42" stop-color="#d2b4f4"/><stop offset=".78" stop-color="#9879d7"/><stop offset="1" stop-color="#8972ad"/></radialGradient>
+ <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="85%"><stop stop-color="#a9dafa"/><stop offset=".28" stop-color="#f5b8d7"/><stop offset=".6" stop-color="#bee7ff"/><stop offset="1" stop-color="#ffd4ec"/></linearGradient>
+ <radialGradient id="shine"><stop stop-color="#fff" stop-opacity=".88"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+ <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter></defs>
+ <circle cx="55" cy="222" r="2.3" fill="#ddc4f1" opacity="0.45"/><circle cx="84" cy="68" r="1.05" fill="#fff7ed" opacity="0.5700000000000001"/><circle cx="113" cy="139" r="1.05" fill="#ddc4f1" opacity="0.69"/><circle cx="142" cy="210" r="1.05" fill="#fff7ed" opacity="0.81"/><circle cx="171" cy="56" r="2.3" fill="#ddc4f1" opacity="0.45"/><circle cx="200" cy="127" r="1.05" fill="#fff7ed" opacity="0.5700000000000001"/><circle cx="229" cy="198" r="1.05" fill="#ddc4f1" opacity="0.69"/><circle cx="258" cy="44" r="1.05" fill="#fff7ed" opacity="0.81"/><circle cx="287" cy="115" r="2.3" fill="#ddc4f1" opacity="0.45"/><circle cx="36" cy="186" r="1.05" fill="#fff7ed" opacity="0.5700000000000001"/><circle cx="65" cy="32" r="1.05" fill="#ddc4f1" opacity="0.69"/><circle cx="94" cy="103" r="1.05" fill="#fff7ed" opacity="0.81"/><circle cx="123" cy="174" r="2.3" fill="#ddc4f1" opacity="0.45"/><circle cx="152" cy="20" r="1.05" fill="#fff7ed" opacity="0.5700000000000001"/><circle cx="181" cy="91" r="1.05" fill="#ddc4f1" opacity="0.69"/><circle cx="210" cy="162" r="1.05" fill="#fff7ed" opacity="0.81"/><circle cx="239" cy="233" r="2.3" fill="#ddc4f1" opacity="0.45"/>
+ <g transform="rotate(-20 165 130)">
+ <ellipse cx="165" cy="131" rx="139" ry="40" fill="none" stroke="url(#ring)" stroke-width="20" opacity=".28"/>
+ <ellipse cx="165" cy="131" rx="137" ry="39" fill="none" stroke="url(#ring)" stroke-width="5" opacity=".85"/>
+ </g>
+ <circle cx="168" cy="128" r="83" fill="url(#orb)" stroke="#fff8ff" stroke-width="2"/>
+ <circle cx="140" cy="95" r="55" fill="url(#shine)" opacity=".45"/>
+ <clipPath id="clip"><circle cx="168" cy="128" r="81"/></clipPath>
+ <g clip-path="url(#clip)"><path d="M 95 99 Q 165 65 229 88" stroke="#fff4f7" stroke-width="6" fill="none" opacity="0.12"/><path d="M 92 121 Q 165 93 231 106" stroke="#a9dafa" stroke-width="10" fill="none" opacity="0.15"/><path d="M 89 143 Q 165 121 233 124" stroke="#fff4f7" stroke-width="14" fill="none" opacity="0.18"/><path d="M 86 165 Q 165 149 235 142" stroke="#a9dafa" stroke-width="6" fill="none" opacity="0.21"/><path d="M 83 187 Q 165 177 237 160" stroke="#fff4f7" stroke-width="10" fill="none" opacity="0.24"/><path d="M87 145q80 55 165 6" fill="none" stroke="#fff" stroke-width="6" opacity=".12"/></g>
+ <g transform="rotate(-20 165 130)">
+ <path d="M30 151A139 40 0 0 0 301 151" fill="none" stroke="url(#ring)" stroke-width="15" opacity=".9"/>
+ <path d="M30 151A139 40 0 0 0 301 151" fill="none" stroke="#fff9f5" stroke-width="2" opacity=".78"/>
+ </g>
+ <path d="M49 41v13m-6-6h13M267 216v12m-6-6h12" stroke="#9879d7" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+ </svg>
