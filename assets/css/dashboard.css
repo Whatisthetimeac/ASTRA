@@ -49,12 +49,12 @@ section[data-page="inicio"].astra-home[hidden]{display:none!important}
 .astra-home .map-svg{opacity:.7;inset:0 0 10px}.astra-home .map-path-under{stroke:#e2bce7;stroke-width:6}.astra-home .map-path{stroke:#fff;stroke-width:3;stroke-dasharray:9 12}
 .astra-home .map-node{width:120px;height:152px;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;font-size:0!important;font-weight:400!important;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:0;padding:0;animation:none!important;z-index:4;transition:transform .18s ease!important}
 .astra-home .map-node::before{content:"";display:block;width:117px;height:106px;flex:0 0 106px;background-position:center;background-size:contain;background-repeat:no-repeat;filter:drop-shadow(0 6px 6px #9677bb18)}
-.astra-home .map-node.n0::before,#map-full .map-node.n0::before{background-image:url('images/astraverse/explorar.svg')}
-.astra-home .map-node.n1::before,#map-full .map-node.n1::before{background-image:url('images/astraverse/aprender.svg')}
-.astra-home .map-node.n2::before,#map-full .map-node.n2::before{background-image:url('images/astraverse/experimentar.svg')}
-.astra-home .map-node.n3::before,#map-full .map-node.n3::before{background-image:url('images/astraverse/criar.svg')}
-.astra-home .map-node.n4::before,#map-full .map-node.n4::before{background-image:url('images/astraverse/impactar.svg')}
-.astra-home .map-node.n5::before,#map-full .map-node.n5::before{background-image:url('images/astraverse/liderar.svg')}
+.astra-home .map-node.n0::before,#map-full .map-node.n0::before{background-image:url('../images/astraverse/explorar.svg')}
+.astra-home .map-node.n1::before,#map-full .map-node.n1::before{background-image:url('../images/astraverse/aprender.svg')}
+.astra-home .map-node.n2::before,#map-full .map-node.n2::before{background-image:url('../images/astraverse/experimentar.svg')}
+.astra-home .map-node.n3::before,#map-full .map-node.n3::before{background-image:url('../images/astraverse/criar.svg')}
+.astra-home .map-node.n4::before,#map-full .map-node.n4::before{background-image:url('../images/astraverse/impactar.svg')}
+.astra-home .map-node.n5::before,#map-full .map-node.n5::before{background-image:url('../images/astraverse/liderar.svg')}
 .astra-home .map-node small{display:block;position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:118px;width:118px;margin:0;padding:0!important;border:0!important;box-shadow:none!important;background:transparent!important;color:#44335f!important;line-height:1.3;font: .71rem/1.35 Georgia,serif;white-space:normal;text-align:center}
 .astra-home .map-node.completed::after{content:"✓";position:absolute;right:4px;top:15px;width:23px;height:23px;border-radius:50%;background:#64bbaa;color:#fff;font:600 15px/23px system-ui;box-shadow:0 2px 4px #407d7544}
 .astra-home .map-node.locked::after{content:"⌑";position:absolute;right:4px;top:16px;width:21px;height:21px;border-radius:50%;background:#7b679d;color:#fff;font:600 15px/21px system-ui}
