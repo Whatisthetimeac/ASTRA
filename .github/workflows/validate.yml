@@ -16,6 +16,9 @@ jobs:
         run: |
           node --check assets/js/app.js
           node --check assets/js/circuitos.js
+          node --check assets/js/search.js
+      - name: Verificar identidade visual e integridade do dashboard
+        run: node tests/validate-dashboard.mjs
       - name: Testes de integridade das aulas
         run: node tests/validate-circuits.mjs
       - name: Verificar arquivos e referencias essenciais
