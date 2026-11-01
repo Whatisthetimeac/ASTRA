@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#f9f4ff"><meta name="description" content="ASTRA — protótipo gamificado e acessível de educação em robótica e impacto social para meninas de 12 a 15 anos.">
+<meta name="theme-color" content="#fffaf5"><meta name="description" content="ASTRA — protótipo gamificado e acessível de educação em robótica e impacto social para meninas de 12 a 15 anos.">
 <title>ASTRA • Sua jornada começa nas estrelas</title>
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -11,7 +11,7 @@
 <div class="app">
 <aside class="sidebar" aria-label="Menu principal">
   <div class="logo-row"><img class="logo-icon" src="assets/images/simbolo-astra.webp" alt="Símbolo do ASTRA"><div><div class="logo-title">ASTRA</div><div class="logo-caption">meu universo</div></div></div>
-  <div class="nav-label">Seu universo</div>
+  <div class="nav-label">Sua jornada</div>
   <nav class="nav" aria-label="Navegação da plataforma">
     <button class="nav-btn active" data-nav="inicio" aria-current="page"><span class="emoji" aria-hidden="true">🏠</span><span>Início</span></button>
     <button class="nav-btn" data-nav="mapa"><span class="emoji" aria-hidden="true">🪐</span><span>Mapa estelar</span></button>
@@ -21,14 +21,14 @@
     <button class="nav-btn" data-nav="criacao"><span class="emoji" aria-hidden="true">💡</span><span>Criações</span></button>
     <button class="nav-btn" data-nav="medalhas"><span class="emoji" aria-hidden="true">🏅</span><span>Medalhas</span></button>
   </nav>
-  <div class="side-bottom"><div class="side-note"><div class="badge-sticker" aria-hidden="true">🌟</div><strong>Sua curiosidade move mundos.</strong><p>Aprenda sem pressa. Aqui toda descoberta merece brilhar.</p></div><div class="copyright">ASTRA • protótipo para revisão • v2</div></div>
+  <div class="side-bottom"><div class="side-note"><div class="badge-sticker" aria-hidden="true">🌟</div><strong>Sua curiosidade move mundos.</strong><p>Aprenda sem pressa. Aqui toda descoberta merece brilhar.</p></div><div class="copyright">✧ Sonhe · Aprenda · Construa · Inspire</div></div>
 </aside>
 <div class="layout">
-<header class="topbar"><div class="crumb">ASTRA <span aria-hidden="true">/</span> <strong id="breadcrumb">Início</strong></div><div class="toolbar"><span class="flag">✦ Universo demonstrativo</span><button id="settings-btn" class="control" type="button">♿ Acessibilidade</button></div></header>
+<header class="topbar"><div class="crumb"><span aria-hidden="true">✦</span> <strong id="breadcrumb">Início</strong></div><div class="toolbar"><span class="flag">✦ Universo demonstrativo</span><button id="settings-btn" class="control" type="button">♿ Acessibilidade</button></div></header>
 <main id="main" class="content" tabindex="-1">
 <section data-page="inicio" aria-labelledby="home-title">
   <div class="hero">
-    <div class="hero-copy"><span class="chip">✦ Bem-vinda, futura inventora!</span><h1 id="home-title">Seu universo de <em>descobertas</em> começa aqui.</h1><p>Ciência, robótica e imaginação em uma aventura para transformar o mundo, uma missão de cada vez.</p><div class="hero-actions"><button class="btn" data-nav="mapa">Explorar meu mapa <span aria-hidden="true">↗</span></button><button class="btn btn-light" data-nav="missoes">Ver missões</button></div></div>
+    <div class="hero-copy"><span class="chip">B E M - V I N D A &nbsp; A O &nbsp; A S T R A</span><h1 id="home-title">ASTRA <span class="hero-sparkle" aria-hidden="true">✧</span></h1><p class="hero-subtitle">Tecnologia, ciência e criatividade<br>para meninas que sonham em ir mais longe.</p><p class="hero-motto">mais meninas em órbita ✦</p><div class="hero-actions"><button class="btn" data-nav="mapa">Explorar meu mapa <span aria-hidden="true">↗</span></button><button class="btn btn-light" data-nav="missoes">Ver missões</button></div></div>
     <div class="hero-art"><img src="assets/images/logo-astra.webp" alt="Logotipo ASTRA escolhido: estrela com órbita suave e letras pastéis brilhantes"><span class="art-star" aria-hidden="true">✧</span></div>
   </div>
   <div class="feature-row" aria-label="Resumo do seu progresso">
@@ -37,11 +37,11 @@
     <article class="feature-tile white-card yellow"><div class="tile-symbol" aria-hidden="true">🏅</div><div class="big-num" id="home-awards">0</div><p>medalhas desbloqueadas</p></article>
   </div>
   <div class="two-col"><div>
-    <div class="section-heading"><div><h2>🪐 Meu mapa de aventuras</h2><p>Complete missões para iluminar novas constelações.</p></div><button class="linkish" data-nav="mapa">Ver mapa inteiro ↗</button></div>
+    <div class="section-heading"><div><h2>Sua jornada <span aria-hidden="true">✧</span></h2><p>Complete missões para iluminar novas constelações.</p></div><button class="linkish" data-nav="mapa">Ver mapa inteiro ↗</button></div>
     <div id="map-home" class="star-map" aria-label="Mapa das seis missões"></div>
     <div class="world-info"><div><div class="symbol" aria-hidden="true" id="featured-symbol">🔎</div><span class="section-label">PRÓXIMA MISSÃO</span><h3 id="featured-title">O olhar de exploradora</h3><p id="featured-desc">Descubra um desafio real que gostaria de transformar.</p></div><button id="featured-btn" class="btn">Começar missão ↗</button></div>
   </div><div class="right-stack">
-    <article class="white-card passport"><div class="passport-top"><div><span class="level" id="level-label">NÍVEL 1 · EXPLORADORA</span><h3>Meu passaporte ✨</h3></div><span class="planet-badge" aria-hidden="true">🌙</span></div><div class="stars"><span id="passport-stars">0</span> <span style="font-size:.95rem">/ 120 ⭐</span></div><div class="progress" role="progressbar" aria-label="Progresso nas missões" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" id="progressbar"><span id="progress-fill"></span></div><p class="progress-desc"><b id="mission-counter">0 de 6</b> missões concluídas</p></article>
+    <article class="white-card passport"><div class="passport-top"><div><span class="level" id="level-label">NÍVEL 1 · EXPLORADORA</span><h3>Meu progresso ✨</h3></div><span class="planet-badge" aria-hidden="true">🌙</span></div><div class="stars"><span id="passport-stars">0</span> <span style="font-size:.95rem">/ 120 ⭐</span></div><div class="progress" role="progressbar" aria-label="Progresso nas missões" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" id="progressbar"><span id="progress-fill"></span></div><p class="progress-desc"><b id="mission-counter">0 de 6</b> missões concluídas</p></article>
     <article class="white-card sticker-card"><div class="icon" aria-hidden="true">🎁</div><h3>Uma nova medalha te espera!</h3><p id="next-award">Experimente sua primeira missão para ganhar o selo de Exploradora.</p><button class="linkish" data-nav="medalhas">Ver coleção ↗</button></article>
     <article class="white-card a11y-card"><div style="font-size:1.7rem" aria-hidden="true">🌈</div><h3>Um universo para todas</h3><p>Texto ampliável, menos animações e desafios sem cronômetro.</p><button class="linkish" id="settings-inline">Personalizar experiência ↗</button></article>
   </div></div>
