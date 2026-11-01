@@ -39,3 +39,48 @@ button:active{transform:scale(.97)!important}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 /* ASTRA Lab — trilha de circuitos e lógica */
 .astra-lab-note{padding:17px 20px;border-radius:18px;background:#fff4df;border:1px solid #f2dfba;color:#624b42;margin:16px 0 23px;line-height:1.65}.astra-course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:17px}.astra-course-card{background:#fff;border:1px solid #eee1f3;border-radius:22px;padding:15px;box-shadow:0 6px 24px #8d75a00c;display:flex;flex-direction:column;gap:9px}.astra-course-card img{width:100%;height:135px;object-fit:cover;border-radius:15px;background:#f8f1fc}.astra-course-card h3{font-size:1.05rem;margin:2px 0}.astra-course-card p{font-size:.91rem;line-height:1.5;margin:0;color:#685c70;flex:1}.astra-course-card .btn{align-self:flex-start}.astra-lesson{margin-top:24px;padding:24px!important;scroll-margin-top:85px}.astra-lesson h2{margin:5px 0 14px}.astra-lesson h3{margin:22px 0 9px}.astra-lesson p,.astra-lesson li{line-height:1.7}.astra-lesson ol{padding-left:23px}.astra-lesson .astra-schematic{width:100%;max-height:280px;object-fit:contain;background:#fbf7ff;border:1px solid #e7d8ee;border-radius:16px}.astra-lesson .astra-quiz{padding:16px;background:#f6f0ff;border-radius:16px;margin-top:18px}.astra-lesson .astra-quiz button{margin:5px;padding:9px 13px;border-radius:11px;border:1px solid #d8c6e7;background:white;cursor:pointer}.astra-lesson .astra-quiz button:focus-visible{outline:3px solid #9160b5}.astra-lesson .astra-answer{font-weight:600;min-height:1.5em}.astra-tags{font-size:.77rem;letter-spacing:.03em;color:#805e91}.astra-source{font-size:.85rem;color:#685c70;margin-top:24px}.astra-lesson .astra-action{display:inline-block;margin-top:10px;background:#6f4b88;color:white;text-decoration:none;padding:12px 17px;border-radius:13px}.astra-lesson .astra-action:focus-visible{outline:3px solid #e7b6e4}@media(max-width:650px){.astra-course-grid{grid-template-columns:1fr 1fr;gap:10px}.astra-course-card{padding:10px}.astra-course-card img{height:95px}.astra-lesson{padding:15px!important}}@media(max-width:390px){.astra-course-grid{grid-template-columns:1fr}}
+
+
+/* ASTRA visual system v3 — editorial cream + restrained celestial pastels */
+:root{--ink:#352c58;--muted:#756e86;--lav:#d9cbe4;--plum:#71528d;--pink:#f5ced0;--yellow:#fff0a8;--blue:#b9ddf5;--mint:#ceddc0;--peach:#f4d7bd;--paper:#fffdf9;--line:#eadfe8;--bg:#fffaf5;--card-shadow:0 7px 24px rgba(98,76,119,.06)}
+body{background:radial-gradient(ellipse at 75% 4%,#fff1ef 0,transparent 37%),linear-gradient(135deg,#fffdf8,#fcf7f8 60%,#f9f8fc);color:var(--ink);font-family:'Avenir Next','Segoe UI',system-ui,sans-serif}
+h1,h2,h3,.logo-title,.nav-btn,.section-heading h2,.headgroup h1{font-family:Georgia,'Times New Roman',serif;letter-spacing:.015em}
+.app{grid-template-columns:210px minmax(0,1fr);max-width:1660px}
+.sidebar{background:linear-gradient(180deg,#fff9f6 0%,#fffdf9 58%,#f9f2ff 100%);border-right:1px solid #eee3e7;padding:25px 15px;box-shadow:2px 0 24px rgba(150,117,152,.025)}
+.logo-row{display:flex;flex-direction:column;text-align:center;gap:4px;padding:3px 8px 23px}
+.logo-icon{width:100px;height:100px;object-fit:contain;filter:drop-shadow(0 6px 9px rgba(182,135,210,.12))}
+.logo-title{font-size:1.75rem;letter-spacing:.28em;font-weight:400;color:#7d5594}
+.logo-caption{font-size:.67rem;letter-spacing:.27em;text-transform:uppercase;color:#a18baa}
+.nav-label{font-family:Georgia,serif;letter-spacing:.24em;text-transform:uppercase;font-size:.68rem;color:#9b89a3;margin-bottom:14px}
+.nav{gap:8px}.nav-btn{min-height:44px;border-radius:30px;font-size:.94rem;color:#5d4c78;transition:background .18s,transform .18s,box-shadow .18s}
+.nav-btn:hover{transform:translateX(2px);background:#f8eaf5}
+.nav-btn.active,.nav-btn[aria-current="page"]{background:linear-gradient(95deg,#f9dce8,#eedafa);border:1px solid #f6e3f1;box-shadow:0 4px 12px rgba(192,146,190,.1)}
+.nav-btn .emoji{filter:saturate(.65);font-size:1.2rem}
+.layout{min-width:0}.topbar{min-height:82px;background:rgba(255,253,249,.62);backdrop-filter:blur(12px);border-bottom:1px solid #f2e9ea;padding-inline:clamp(20px,3vw,48px)}
+.crumb{font-family:Georgia,serif;letter-spacing:.12em;color:#8a7098}.toolbar .flag{background:#fff8f7;border:1px solid #f1e4ec;color:#8d759b}.control{border-color:#eadfe8}
+.content{padding:24px clamp(18px,2.5vw,40px) 65px}
+.hero{position:relative;min-height:295px;overflow:hidden;background:radial-gradient(circle at 75% 50%,rgba(245,206,208,.25),transparent 36%),linear-gradient(115deg,#fffdf9,#fff9f7 60%,#fdf7fb);border:1px solid #f1e6e9;border-radius:23px;box-shadow:var(--card-shadow);padding:clamp(24px,3vw,46px)}
+.hero:before{content:'✦   ·    ✧   ·   ✦';position:absolute;top:13%;left:55%;color:#e8c7e7;letter-spacing:55px;font-size:20px;pointer-events:none}
+.hero:after{content:'';position:absolute;width:340px;height:180px;right:5%;top:12%;border:1px solid rgba(202,173,228,.26);border-radius:50%;transform:rotate(-24deg);pointer-events:none}
+.hero-copy{position:relative;z-index:2;max-width:53%}
+.hero .chip{background:transparent;border:0;padding:0;color:#72538a;font-family:Georgia,serif;letter-spacing:.28em;font-size:.7rem;font-weight:400}
+.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:.16em;color:#7e5898;font-size:clamp(3.3rem,6.6vw,6.7rem);line-height:1.06;margin:12px 0}
+.hero h1 em{font-style:normal}.hero-sparkle{font-size:.4em;vertical-align:top;color:#e6b8d5;letter-spacing:0}
+.hero-subtitle{font-family:Georgia,serif;color:#493a65;font-size:clamp(1rem,1.45vw,1.25rem);line-height:1.55}
+.hero-motto{font-family:Georgia,serif;font-style:italic;color:#966da8;font-size:.98rem;margin:6px 0 16px}
+.hero-art{position:absolute;right:2%;top:0;width:46%;height:100%;display:flex;align-items:center;justify-content:center;z-index:1}
+.hero-art img{width:min(100%,340px);height:92%;object-fit:contain;mix-blend-mode:multiply;filter:drop-shadow(0 12px 14px rgba(189,158,215,.12))}
+.hero-actions{position:relative;z-index:3}.btn{border-radius:25px;background:linear-gradient(100deg,#dfc8ee,#f7d5e5);color:#48345e;border:1px solid #e9d5ec;box-shadow:0 5px 12px rgba(151,116,168,.08)}
+.btn:hover{filter:brightness(.985)}.btn-light{background:#fffdfb}
+.white-card,.feature-tile,.star-map,.world-info,.astra-course-card,.astra-lesson,.headgroup,.chapter-pill{background:rgba(255,253,250,.91);border:1px solid #eee3e8;box-shadow:var(--card-shadow);border-radius:20px}
+.feature-row{gap:14px}.feature-tile{min-height:125px}.feature-tile.blue{background:linear-gradient(145deg,#fffdfb,#f0f8ff)}.feature-tile.yellow{background:linear-gradient(145deg,#fffdfb,#fff8e5)}
+.section-heading h2{font-size:1.35rem;font-weight:400;text-transform:uppercase;letter-spacing:.18em;color:#4c3d68}.section-heading p{font-size:.87rem}
+.star-map{background:radial-gradient(circle at 23% 28%,#f7e8f8 0,transparent 26%),radial-gradient(circle at 70% 48%,#eaf5ff 0,transparent 34%),linear-gradient(120deg,#fff9f7,#fffdfb);border-radius:22px;min-height:220px}
+.passport{background:linear-gradient(145deg,#fffdfb,#fff8fc)}.sticker-card{background:linear-gradient(130deg,#fffaf7,#fdf6ff)}.a11y-card{background:linear-gradient(140deg,#fffdfb,#f7fbf8)}
+.progress{background:#eee7ed}.progress>span{background:linear-gradient(90deg,#f2bad9,#c5b2f3,#a9d9f8)}
+.astra-course-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(107,84,136,.1)}
+.headgroup{padding:28px}.headgroup h1{font-weight:400;color:#72538a}
+.nav-btn:focus-visible,.btn:focus-visible,.linkish:focus-visible{outline:3px solid #8057aa;outline-offset:3px}
+@media(max-width:950px){.app{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.logo-row{flex-direction:row;text-align:left}.logo-icon{width:58px;height:58px}.hero-copy{max-width:65%}.hero-art{width:37%}.hero h1{font-size:clamp(2.8rem,8vw,4.5rem)}}
+@media(max-width:620px){.topbar{min-height:64px}.content{padding:16px 12px 40px}.hero{min-height:390px;padding:25px 20px}.hero-copy{max-width:100%}.hero-art{opacity:.22;width:85%;right:-10%;top:12%;pointer-events:none}.hero h1{font-size:3.2rem}.hero:after{right:-25%}.feature-row{gap:10px}.section-heading h2{font-size:1.1rem;letter-spacing:.08em}}
+@media(prefers-reduced-motion:reduce){.nav-btn,.astra-course-card{transition:none}}
