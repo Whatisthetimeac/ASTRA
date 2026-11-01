@@ -52,3 +52,7 @@ O progresso fica **somente no navegador usado**, sem conta, banco de dados ou si
 **Referência funcional:** [plataforma-estudos](https://github.com/jpavrdev/plataforma-estudos). O ASTRA mantém conteúdo, identidade e código próprios; não houve cópia de código desse repositório.
 
 **Iniciativa independente:** ASTRA — ensino de robótica para meninas.
+
+
+## ASTRA Lab
+A seção **Circuitos e lógica** reúne dez atividades com desafios, materiais e links para o Tinkercad. As imagens SVG são conceituais; não devem ser usadas como referência de ligações elétricas. O GitHub Actions valida a sintaxe JavaScript e a presença de arquivos essenciais.
