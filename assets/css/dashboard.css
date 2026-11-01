@@ -121,3 +121,10 @@ button:focus-visible,.astra-link:focus-visible{outline:3px solid #7954ad;outline
 /* Priorizar a caixa de resultados sobre o conteúdo: validado no Chromium. */
 .topbar{position:relative;z-index:60}
 .astra-search-wrap{z-index:61}
+
+/* QA: evitar sobreposição entre planetas clicáveis e alvos instáveis. */
+.astra-home .map-node{width:98px!important;height:132px!important;transition:none!important}
+.astra-home .map-node::before{width:98px!important;height:92px!important;flex-basis:92px!important}
+.astra-home .map-node small{width:98px!important;max-width:98px!important}
+.astra-home .map-node:hover:not(:disabled){transform:translate(-50%,-50%)!important;filter:brightness(1.045)}
+.astra-home .map-node>small{pointer-events:none}
