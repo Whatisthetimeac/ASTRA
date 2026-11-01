@@ -1,0 +1,107 @@
+/* ASTRA — dashboard artístico fiel à composição aprovada.
+   Estética própria implementada em CSS + SVG, sem imagens fictícias de usuárias. */
+:root{--astra-cream:#fffbf7;--astra-ink:#382a57;--astra-rose:#f6d6e2;--astra-lavender:#dccbf0;--astra-sky:#c2e4f7;--astra-mint:#d8eddd;--astra-yellow:#ffedb2;--astra-line:#ecdee8;--astra-shadow:0 6px 24px rgba(101,72,126,.055)}
+body{background:radial-gradient(circle at 55% -12%,#fff1f2 0,transparent 48%),#fffbf7;color:var(--astra-ink)}
+.app{grid-template-columns:198px minmax(0,1fr);max-width:1760px}
+.sidebar{z-index:4;padding:14px 12px 17px;background:linear-gradient(180deg,#fff7f5 0%,#fffdfb 65%,#faf4fe 100%);box-shadow:1px 0 0 #f1e5eb}
+.logo-row{gap:0;padding:0 0 26px}.logo-icon{height:112px;width:112px;object-fit:contain}.logo-title{font-family:Georgia,serif;letter-spacing:.27em;font-size:1.65rem;color:#745293}
+.nav{gap:9px}.nav-btn{height:48px;min-height:48px;font-family:Georgia,serif;font-size:1rem;font-weight:400;letter-spacing:0;border-radius:28px;padding:8px 15px;color:#5d4b7b}
+.nav-btn .emoji{font-size:1.15rem;opacity:.8}.nav-btn:hover{background:#f9eaf4}
+.nav-btn.active,.nav-btn[aria-current="page"]{background:linear-gradient(105deg,#fae2ea,#f2dafb);border:1px solid #f7e5f1;box-shadow:0 3px 10px #b48caf19}
+.side-bottom{margin-top:auto}.side-note{min-height:220px;padding:20px 10px;background:radial-gradient(ellipse at 50% 50%,#fffdf9 10%,#f7edfc 70%,#fff3f3 100%);border-radius:51% 49% 45% 55%;box-shadow:inset 0 0 0 1px #f2e3f6;border:0}.side-note .badge-sticker{font-size:2.4rem;color:#cba4dc}.side-note strong{color:#74628c;line-height:2.3;font-size:.73rem}.copyright{padding:12px 0 0;line-height:1.6}
+.layout{padding:0!important;min-width:0}.content{padding:4px 17px 45px!important}
+.topbar{padding:12px 19px!important;margin:0 0 4px!important;min-height:80px;gap:15px;border-bottom:0!important;background:transparent!important}
+.astra-search-wrap{position:relative;z-index:20;width:min(600px,53%);min-width:210px}.astra-search{width:100%!important;height:45px;padding:0 18px;background:#fffdfbaa;border:1px solid #eee2e7;border-radius:27px;box-shadow:0 3px 15px #a481a50d}
+.astra-search input{width:100%;font-family:Georgia,serif;font-size:.88rem}.astra-search input:focus-visible{outline:0}.astra-search:focus-within{outline:2px solid #9c78c4;outline-offset:2px}
+.astra-search-results{position:absolute;top:52px;left:0;right:0;z-index:80;overflow:auto;max-height:min(440px,65vh);border:1px solid #e8d8eb;background:#fffefa;box-shadow:0 18px 45px #6d4a8b25;border-radius:18px;padding:9px}
+.astra-search-results[hidden]{display:none}.astra-search-result{display:flex;gap:12px;align-items:center;text-align:left;width:100%;min-height:58px;background:transparent;border:0;color:var(--astra-ink);border-radius:12px;padding:9px 11px}
+.astra-search-result:hover,.astra-search-result[aria-selected="true"]{background:#f8eef9}
+.astra-search-result span{display:flex;flex-direction:column;gap:1px}.astra-search-result strong{font-size:.88rem;font-weight:600}.astra-search-result small{font-size:.72rem;color:#8a7694}
+.astra-search-no-results{padding:18px;color:#7d7088;font-size:.88rem}
+.astra-profile{padding:4px 14px 4px 5px}.astra-profile strong{font-size:.95rem}.astra-avatar{width:48px;height:48px}
+section[data-page="inicio"].astra-home{display:grid!important;grid-template-columns:minmax(0,1fr) 326px;gap:15px;align-items:start;grid-template-areas:none!important}
+section[data-page="inicio"].astra-home[hidden]{display:none!important}
+.astra-home-main,.astra-home-side{min-width:0;display:flex;flex-direction:column;gap:14px}
+.astra-panel{border:1px solid var(--astra-line);background:linear-gradient(145deg,rgba(255,253,250,.97),rgba(255,249,247,.92));border-radius:20px;box-shadow:var(--astra-shadow);min-width:0;overflow:hidden}
+.astra-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 22px 8px}
+.astra-panel-heading h2{margin:0;font-family:Georgia,serif;color:#43345e;font-weight:400;font-size:1.14rem;line-height:1.2;letter-spacing:.2em;text-transform:uppercase}
+.astra-overline{display:block;font-size:.62rem;letter-spacing:.19em;color:#a08ca8;margin:0 0 7px}
+.astra-panel-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.astra-link{font-family:Georgia,serif;font-size:.81rem;border:1px solid #eee3eb;border-radius:20px;background:#fffdfa;color:#655376;padding:8px 13px;white-space:nowrap;min-height:34px;font-weight:400}
+.astra-link:hover{background:#f8ecf8;border-color:#e4caeb}
+.astra-welcome{display:flex;position:relative;min-height:236px;overflow:hidden;isolation:isolate;padding:24px 27px 15px;background:radial-gradient(ellipse at 80% 45%,#f7eaf4 0,transparent 45%)}
+.astra-welcome:before{content:"✧";position:absolute;top:20%;left:57%;font-size:24px;color:#f2d1df}
+.astra-welcome:after{content:"";position:absolute;z-index:-1;right:0;top:15%;width:58%;height:75%;background:radial-gradient(ellipse,#eddaf755,transparent 65%);border-radius:50%;transform:rotate(-18deg)}
+.astra-welcome-copy{z-index:2;flex:1;min-width:0;max-width:51%}.astra-eyebrow{font-family:Georgia,serif;letter-spacing:.42em;font-size:.68rem;color:#614878}
+.astra-welcome-copy h1{margin:9px 0 6px;font:400 clamp(3.55rem,6.9vw,6.6rem)/1 Georgia,serif;color:#785796;letter-spacing:.16em}
+.astra-welcome-copy p{font:1.06rem/1.45 Georgia,serif;color:#44365d;margin:0 0 13px}.astra-welcome-cta{color:#9971a8;font:.82rem Georgia,serif;letter-spacing:.1em}
+.astra-welcome-art{position:absolute;right:0;top:-4%;width:53%;height:108%;display:flex;align-items:center;justify-content:center}
+.astra-welcome-art:before{content:"";position:absolute;width:95%;height:59%;border-radius:50%;border:1px solid #dfc3e8aa;transform:rotate(-21deg)}
+.astra-welcome-art img{width:min(100%,360px);height:100%;object-fit:contain;filter:drop-shadow(0 5px 7px #a887c933)}
+.welcome-orbit-note{position:absolute;right:4%;bottom:17%;font:italic 1.1rem/1.05 Georgia,serif;transform:rotate(-11deg);color:#8c6ca0;text-align:center}
+.welcome-spark{position:absolute;color:#deb7e5}.spark-a{top:23%;right:8%;font-size:1.65rem}.spark-b{bottom:18%;left:10%;font-size:1.1rem}
+.astra-panel-description{margin:0 22px;font: .85rem/1.45 Georgia,serif;color:#8f7d9b}
+.astra-map-stage{padding:0 8px 2px;min-height:261px;position:relative;background:radial-gradient(ellipse at 23% 42%,#f6e1f9 0,transparent 26%),radial-gradient(ellipse at 53% 42%,#e2efff 0,transparent 33%),radial-gradient(ellipse at 79% 44%,#f7e6ed 0,transparent 29%);overflow:hidden}
+.astra-map-stage:before{content:"✧       ✦      ·       ✧      ✦";position:absolute;inset:22px 6% auto;color:#dcbade;letter-spacing:42px;white-space:nowrap;pointer-events:none}
+.astra-home .star-map{height:245px!important;min-height:245px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:visible}
+.astra-home .star-map:before,.astra-home .star-map:after{display:none}
+.astra-home .map-label,.astra-home .map-world-pill,.astra-home .map-planet{display:none}
+.astra-home .map-svg{opacity:.7;inset:0 0 10px}.astra-home .map-path-under{stroke:#e2bce7;stroke-width:6}.astra-home .map-path{stroke:#fff;stroke-width:3;stroke-dasharray:9 12}
+.astra-home .map-node{width:120px;height:152px;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;font-size:0!important;font-weight:400!important;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:0;padding:0;animation:none!important;z-index:4;transition:transform .18s ease!important}
+.astra-home .map-node::before{content:"";display:block;width:117px;height:106px;flex:0 0 106px;background-position:center;background-size:contain;background-repeat:no-repeat;filter:drop-shadow(0 6px 6px #9677bb18)}
+.astra-home .map-node.n0::before,#map-full .map-node.n0::before{background-image:url('images/astraverse/explorar.svg')}
+.astra-home .map-node.n1::before,#map-full .map-node.n1::before{background-image:url('images/astraverse/aprender.svg')}
+.astra-home .map-node.n2::before,#map-full .map-node.n2::before{background-image:url('images/astraverse/experimentar.svg')}
+.astra-home .map-node.n3::before,#map-full .map-node.n3::before{background-image:url('images/astraverse/criar.svg')}
+.astra-home .map-node.n4::before,#map-full .map-node.n4::before{background-image:url('images/astraverse/impactar.svg')}
+.astra-home .map-node.n5::before,#map-full .map-node.n5::before{background-image:url('images/astraverse/liderar.svg')}
+.astra-home .map-node small{display:block;position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:118px;width:118px;margin:0;padding:0!important;border:0!important;box-shadow:none!important;background:transparent!important;color:#44335f!important;line-height:1.3;font: .71rem/1.35 Georgia,serif;white-space:normal;text-align:center}
+.astra-home .map-node.completed::after{content:"✓";position:absolute;right:4px;top:15px;width:23px;height:23px;border-radius:50%;background:#64bbaa;color:#fff;font:600 15px/23px system-ui;box-shadow:0 2px 4px #407d7544}
+.astra-home .map-node.locked::after{content:"⌑";position:absolute;right:4px;top:16px;width:21px;height:21px;border-radius:50%;background:#7b679d;color:#fff;font:600 15px/21px system-ui}
+.astra-home .map-node.locked{filter:grayscale(.2);opacity:.66}
+.astra-home .map-node:hover:not(:disabled){transform:translate(-50%,-54%) scale(1.07)!important}
+.astra-home .n0{left:10%;top:60%}.astra-home .n1{left:26%;top:42%}.astra-home .n2{left:42%;top:62%}.astra-home .n3{left:58%;top:43%}.astra-home .n4{left:74%;top:62%}.astra-home .n5{left:90%;top:40%}
+.astra-mission-showcase,.astra-learn{padding-bottom:16px}.astra-mission-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:8px 16px 0}
+.astra-feature-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;text-align:left;justify-content:flex-start;isolation:isolate;min-height:170px;padding:12px;border:1px solid #ecdce8;border-radius:15px;overflow:hidden;color:#35254f;background:#eee3f4}
+.astra-feature-card:nth-child(2){background:#dedbf8}.astra-feature-card:nth-child(3){background:#ead4ec}
+.astra-feature-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;transition:transform .22s ease}
+.astra-feature-card:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff2f5d6 0%,#fff4f37c 55%,transparent 95%);z-index:-1}
+.astra-feature-card:hover>img{transform:scale(1.07)}
+.astra-feature-card strong{display:block;font:1.03rem/1.22 Georgia,serif;max-width:74%;text-wrap:balance;color:#332347;text-shadow:0 1px 2px #fff9}
+.astra-feature-card small{margin-top:auto;display:block;padding:4px 8px;background:#fffdf9ca;border-radius:16px;font:.68rem Georgia,serif}
+.astra-tile-tag{display:block;font:.61rem Georgia,serif;letter-spacing:.17em;padding:4px 10px;background:#fff4f8df;border:1px solid #f3d5eb;border-radius:17px;color:#945f8b;margin-bottom:10px}
+.astra-learning-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:8px 16px 0}
+.astra-learning-card{display:flex;align-items:center;gap:9px;text-align:left;min-height:73px;padding:9px 10px;background:#fffdfa;border:1px solid #ebe1e8;border-radius:15px;box-shadow:0 4px 10px #6d4c9007;color:#49375d}
+.astra-learning-card>span:nth-child(2){flex:1;min-width:0}.astra-learning-card strong,.astra-learning-card small{display:block}.astra-learning-card strong{font:.91rem Georgia,serif}.astra-learning-card small{font:.71rem Georgia,serif;color:#877890;margin-top:3px}
+.astra-learning-card>span:last-child{font-size:1.35rem;color:#9c85af}.astra-learning-card:hover{background:#faf2fa}
+.learn-icon{display:grid;place-items:center;flex:none;width:39px;height:39px;border-radius:50%;font-size:1.42rem}.learn-icon.pink{background:#f8e1e8;color:#aa6799}.learn-icon.lavender{background:#eae0f7;color:#8865b1}.learn-icon.blue{background:#ddf0fb;color:#568db0}.learn-icon.mint{background:#e0f1e4;color:#709f86}
+.astra-home-side .astra-panel-heading{padding:16px 15px 10px}.astra-home-side .astra-panel-heading h2{font-size:.88rem;letter-spacing:.16em}
+.astra-home-side .astra-link{font-size:.74rem;border:0;background:transparent;padding:3px;color:#887494;min-height:auto}.astra-home-side .astra-link:hover{text-decoration:underline}
+.astra-progress-card{padding-bottom:12px}.astra-level{display:flex;gap:15px;padding:9px 17px 13px;align-items:center}.astra-level-ring{width:100px;height:100px;border-radius:50%;flex:none;display:grid;place-items:center;background:conic-gradient(#b7c3fe 0 31%,#eac5ee 31% 59%,#c3e4ff 59% 78%,#f9d6e0 78% 100%);padding:6px;box-shadow:0 2px 9px #ab84c11c}.astra-level-ring img{width:100%;height:100%;object-fit:contain;border-radius:50%;background:#fff8fa}
+.astra-level-data{min-width:0;flex:1}.astra-level-data .level{font:1.04rem Georgia,serif;color:#4c3c66;letter-spacing:0}.astra-level-data p{font:.79rem Georgia,serif;margin:4px 0 12px;color:#8a7a95}.astra-level-data .progress{height:9px}.astra-level-data small{display:block;font:.72rem Georgia,serif;margin-top:7px;color:#756883}
+.astra-mini-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:0 12px}
+.astra-mini-stats>div{min-width:0;display:grid;justify-items:center;gap:1px;border:1px solid #f0e7ed;border-radius:14px;background:#fffdfbe8;padding:7px 3px}.astra-mini-stats span{font-size:1.25rem;color:#bf93c1}.astra-mini-stats strong{font:1rem Georgia,serif;color:#533c73;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.astra-mini-stats small{font:.67rem Georgia,serif;color:#887c8e}
+.astra-settings-link{border:0;background:none;display:block;margin:10px 16px 0;color:#837293;font:.78rem Georgia,serif;text-decoration:underline;text-underline-offset:3px}
+.astra-tag-soft{font:.69rem Georgia,serif;color:#a06e98}.astra-challenge{display:flex;align-items:center;gap:12px;width:100%;padding:0 13px 15px;text-align:left;color:var(--astra-ink);background:transparent;border:0}
+.astra-challenge img{width:111px;height:96px;object-fit:cover;flex:none;border-radius:12px;border:1px solid #f1dfef}.astra-challenge span:nth-child(2){flex:1;min-width:0}.astra-challenge strong{display:block;font:1.01rem/1.28 Georgia,serif}.astra-challenge small{display:block;font:.77rem/1.4 Georgia,serif;margin-top:10px;color:#9867a0}.astra-arrow{font:2rem Georgia,serif;color:#c99bb7}
+.astra-achievement-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;padding:5px 11px 0}.astra-achievement{text-align:center;min-width:0;filter:grayscale(.55);opacity:.58;transition:filter .15s,opacity .15s}.astra-achievement.unlocked{filter:none;opacity:1}.astra-achievement img{width:100%;height:auto;aspect-ratio:1/1}.astra-achievement small{display:block;font:.72rem/1.25 Georgia,serif;color:#645475}.astra-achievement-note{margin:10px 14px 13px;color:#8a7b91;font:.76rem/1.35 Georgia,serif}
+.astra-next{padding-bottom:15px}.astra-next-content{display:flex;gap:10px;align-items:flex-start;padding:3px 16px 0}.astra-next-icon{font-size:2.3rem;line-height:1;color:#bf97d5}.astra-next-content h3{font:1.08rem/1.23 Georgia,serif;color:#47335e;margin:0 0 6px}.astra-next-content p{font:.78rem/1.45 Georgia,serif;margin:0}.astra-next-button{display:block;width:calc(100% - 30px);margin:13px 15px 0;border:1px solid #edd6ec;background:linear-gradient(110deg,#fce2ec,#e8dcfa);color:#674d7a;border-radius:20px;min-height:38px;font: .84rem Georgia,serif}
+.astra-quote{position:relative;min-height:117px;border:1px solid #efdfec;border-radius:20px;background:radial-gradient(circle at 15% 110%,#dfd5fb 0,transparent 42%),radial-gradient(circle at 95% 80%,#f8cfe3 0,transparent 45%),#fff9f7;display:grid;place-items:center;padding:20px 32px;text-align:center;font:italic 1.12rem/1.4 Georgia,serif;color:#50406b;box-shadow:var(--astra-shadow)}.astra-quote span{position:absolute;right:12%;bottom:6%;font-size:1.9rem;color:#d7a9d7}
+#map-full .map-node{font-size:0;box-shadow:none;background:transparent;border:0;border-radius:0;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;width:126px;height:145px}
+#map-full .map-node::before{content:"";display:block;width:115px;height:109px;background-size:contain;background-repeat:no-repeat;background-position:center}
+#map-full .map-node small{font: .78rem/1.3 Georgia,serif;color:#574575;background:#fffdfaaf;padding:3px 8px;border-radius:15px}
+#map-full .map-node.completed:after{content:"✓";position:absolute;right:9px;top:10px;font-size:1rem;color:#58a99b}#map-full .map-node.locked:after{content:"🔒";position:absolute;right:8px;top:12px;font-size:1rem}
+#map-full .map-node:hover:not(:disabled){transform:translate(-50%,-55%) scale(1.04)}
+#map-full .map-path-under{stroke:#e4bfdc}#map-full .map-path{stroke:#fff6fd}
+[data-page="mapa"] .star-map{background:radial-gradient(circle at 24% 50%,#e9daf7,transparent 32%),radial-gradient(circle at 68% 40%,#dcebf9,transparent 36%),#fff9f8}
+[data-page="medalhas"] .badge-grid,[data-page="missoes"] .mission-grid{gap:17px}
+[data-page]:not([data-page="inicio"]) .headgroup{background:linear-gradient(110deg,#fffaf8,#fdf6ff);border-color:#efe4ec}
+.astra-course-card{border:1px solid #ecdfeb;box-shadow:var(--astra-shadow)}
+.astra-course-card img{border-radius:12px}
+button:focus-visible,.astra-link:focus-visible{outline:3px solid #7954ad;outline-offset:3px}
+@media(max-width:1310px){section[data-page="inicio"].astra-home{grid-template-columns:minmax(0,1fr) 294px}.astra-welcome-copy h1{font-size:4.35rem}.astra-mission-tiles{gap:8px;padding-inline:12px}.astra-feature-card strong{max-width:90%}.astra-map-stage{overflow:hidden}}
+@media(max-width:1120px){section[data-page="inicio"].astra-home{grid-template-columns:1fr}.astra-home-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.astra-quote{min-height:150px}.astra-welcome{min-height:240px}}
+@media(max-width:920px){.app{grid-template-columns:1fr}.sidebar{position:relative;height:auto;padding:10px}.logo-row{flex-direction:row;justify-content:center;gap:10px;padding:4px}.logo-icon{height:60px;width:60px}.logo-title{font-size:1.3rem}.sidebar .nav{display:flex;overflow-x:auto;flex-wrap:nowrap;gap:5px;padding:6px 1px}.sidebar .nav-btn{white-space:nowrap;flex:none;font-size:.87rem;height:41px;min-height:41px}.sidebar .side-bottom{display:none}.topbar{min-height:65px}}
+@media(max-width:690px){.astra-home-side{grid-template-columns:1fr}.astra-search-wrap{width:100%}.astra-profile{display:none}.astra-mission-tiles{grid-template-columns:1fr 1fr}.astra-feature-card:last-child{grid-column:1/-1;min-height:130px}.astra-learning-grid{grid-template-columns:1fr 1fr}.astra-welcome{min-height:230px}.astra-welcome-copy{max-width:70%}.astra-welcome-art{right:-8%;width:63%;opacity:.8}.astra-welcome-copy h1{font-size:3.6rem}.astra-welcome-copy p{font-size:.91rem}.astra-map-stage{overflow-x:auto}.astra-home .star-map{min-width:690px}}
+@media(max-width:460px){.content{padding:0 9px 30px!important}.topbar{padding:9px!important}.astra-welcome{padding:25px 16px;min-height:213px}.astra-welcome-copy{max-width:90%}.astra-welcome-copy h1{font-size:3.15rem}.astra-welcome-art{opacity:.38}.welcome-orbit-note{display:none}.astra-panel-heading{padding:15px 13px 8px;align-items:flex-start}.astra-panel-heading h2{font-size:.97rem}.astra-panel-actions{gap:3px}.astra-link{font-size:.69rem;padding:6px 8px}.astra-mission-tiles{padding:8px}.astra-feature-card{min-height:160px}.astra-feature-card strong{font-size:.9rem}.astra-learning-grid{padding:8px}.astra-learning-card{padding:9px 6px}.learn-icon{width:32px;height:32px}.astra-level-ring{width:78px;height:78px}.astra-level{gap:9px}}
+@media(prefers-reduced-motion:reduce){.astra-feature-card img,.astra-home .map-node,.astra-achievement{transition:none!important}}
