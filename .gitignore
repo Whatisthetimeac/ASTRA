@@ -1,0 +1,11 @@
+# Arquivos temporários
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+__pycache__/
+.venv/
+node_modules/
+.env
+.env.*
+!.env.example
