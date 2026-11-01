@@ -117,3 +117,7 @@ button:focus-visible,.astra-link:focus-visible{outline:3px solid #7954ad;outline
 .award .award-icon img{width:100%;height:100%;object-fit:contain}
 .award{background:linear-gradient(135deg,#fffdfb,#fcf8ff);border:1px solid #efe3e9;border-radius:20px;box-shadow:var(--astra-shadow)}
 .award h3{font-family:Georgia,serif;font-size:1.04rem;font-weight:400}
+
+/* Priorizar a caixa de resultados sobre o conteúdo: validado no Chromium. */
+.topbar{position:relative;z-index:60}
+.astra-search-wrap{z-index:61}
